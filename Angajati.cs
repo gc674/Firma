@@ -31,7 +31,11 @@ namespace Firma
             else
             {
                 //se adauga angajat
-                Angajat angajat = new Angajat(Convert.ToInt32(idNumericUpDown.Value), numeBox.Text.Trim(), prenumeBox.Text.Trim(), dateTimePicker1.Value.ToString("dd.MM.yyyy"), telefonBox.Text.Trim());
+                Angajat angajat = new Angajat(Convert.ToInt32(idNumericUpDown.Value),
+                                              numeBox.Text.Trim(),
+                                              prenumeBox.Text.Trim(),
+                                              dateTimePicker1.Value.ToString("dd.MM.yyyy"),
+                                              telefonBox.Text.Trim());
                 _companie.Angajati.Add(angajat);
 
                 //se actualizeaza listView cu angajatul introdus

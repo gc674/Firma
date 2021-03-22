@@ -14,7 +14,7 @@ namespace Firma
 
         public Orelucrate()
         {
-            //used for serialization
+            //pentru serializare
         }
         public Orelucrate (string data, decimal ore, bool denoapte)
         {

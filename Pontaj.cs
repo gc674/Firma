@@ -56,7 +56,7 @@ namespace Firma
                     }
                 }
                 MessageBox.Show(_angajat.Nume);
-                Orelucrate ore = new Orelucrate(dataMonthCalendar.SelectionRange.Start.ToString("dd.MM.yyyy"), OrenumericUpDown.Value, turaNoaptecheckBox.Enabled);
+                Orelucrate ore = new Orelucrate(dataMonthCalendar.SelectionRange.Start.ToString("dd.MM.yyyy"), OrenumericUpDown.Value, turaNoaptecheckBox.Checked);
                 _angajat.Orelucrate.Add(ore);
 
                 _companie.Save();

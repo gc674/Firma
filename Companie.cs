@@ -35,10 +35,13 @@ namespace Firma
 
         public void Load()
         {
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Angajat>));
-            StreamReader streamReader = new StreamReader(fisierCompanie);
-            Angajati = (List<Angajat>)xmlSerializer.Deserialize(streamReader);
-            streamReader.Close();
+            if (File.Exists(fisierCompanie))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Angajat>));
+                StreamReader streamReader = new StreamReader(fisierCompanie);
+                Angajati = (List<Angajat>)xmlSerializer.Deserialize(streamReader);
+                streamReader.Close();
+            }
 
         }
 
