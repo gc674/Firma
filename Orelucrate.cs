@@ -10,6 +10,7 @@ namespace Firma
     {
         //creare lista de ore per angajat
         public BindingList<Ore> Ore;
+        public decimal TotalOre { get; set; }
         private string fisierOreLucrate = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "orelucrate.xml");
 
         public Orelucrate()
@@ -39,5 +40,21 @@ namespace Firma
             }
 
         }
+
+        public Orelucrate OreAngajat(string nume, string prenume)
+        {
+            Orelucrate oreLucrate = new Orelucrate();
+            foreach (Ore ore in Ore)
+            {
+                if (ore.Nume == nume || ore.Prenume == prenume)
+                {
+                    oreLucrate.Ore.Add(ore);
+                }
+
+
+            }
+            return oreLucrate;
+        }
+
     }
 }

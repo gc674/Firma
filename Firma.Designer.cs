@@ -31,13 +31,14 @@ namespace Firma
         {
             this.angajatiButton = new System.Windows.Forms.Button();
             this.pontajButton = new System.Windows.Forms.Button();
+            this.raportButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // angajatiButton
             // 
             this.angajatiButton.Location = new System.Drawing.Point(453, 38);
             this.angajatiButton.Name = "angajatiButton";
-            this.angajatiButton.Size = new System.Drawing.Size(75, 23);
+            this.angajatiButton.Size = new System.Drawing.Size(75, 35);
             this.angajatiButton.TabIndex = 0;
             this.angajatiButton.Text = "Angajati";
             this.angajatiButton.UseVisualStyleBackColor = true;
@@ -45,25 +46,35 @@ namespace Firma
             // 
             // pontajButton
             // 
-            this.pontajButton.Location = new System.Drawing.Point(453, 79);
+            this.pontajButton.Location = new System.Drawing.Point(453, 96);
             this.pontajButton.Name = "pontajButton";
-            this.pontajButton.Size = new System.Drawing.Size(75, 23);
+            this.pontajButton.Size = new System.Drawing.Size(75, 37);
             this.pontajButton.TabIndex = 1;
             this.pontajButton.Text = "Pontaj";
             this.pontajButton.UseVisualStyleBackColor = true;
             this.pontajButton.Click += new System.EventHandler(this.pontajButton_Click);
+            // 
+            // raportButton
+            // 
+            this.raportButton.Location = new System.Drawing.Point(453, 158);
+            this.raportButton.Name = "raportButton";
+            this.raportButton.Size = new System.Drawing.Size(75, 36);
+            this.raportButton.TabIndex = 2;
+            this.raportButton.Text = "Raport Angajat";
+            this.raportButton.UseVisualStyleBackColor = true;
+            this.raportButton.Click += new System.EventHandler(this.raportButton_Click);
             // 
             // Firma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 366);
+            this.Controls.Add(this.raportButton);
             this.Controls.Add(this.pontajButton);
             this.Controls.Add(this.angajatiButton);
             this.Name = "Firma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Firma";
-            //this.Load += new System.EventHandler(this.Firma_Load);
             this.ResumeLayout(false);
 
         }
@@ -72,6 +83,7 @@ namespace Firma
 
         private System.Windows.Forms.Button angajatiButton;
         private System.Windows.Forms.Button pontajButton;
+        private System.Windows.Forms.Button raportButton;
     }
 }
 

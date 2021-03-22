@@ -36,6 +36,12 @@ namespace Firma
 
         }
 
-
+        private void raportButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            RaportAngajat raportAngajat = new RaportAngajat();
+            DialogResult raspuns = raportAngajat.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
