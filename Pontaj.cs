@@ -13,10 +13,12 @@ namespace Firma
     public partial class Pontaj : Form
     {
         private Companie _companie;
+        private Orelucrate _oreLucrate;
         private Angajat _angajat;
         public Pontaj()
         {
             _companie = new Companie();
+            _oreLucrate = new Orelucrate();
             InitializeComponent();
         }
 
@@ -24,6 +26,7 @@ namespace Firma
         {
             // se incarca compania
             _companie.Load();
+            _oreLucrate.Load();
             // se incarca numele angajatilor in combobox
             angajatiComboBox.BeginUpdate();
             foreach( Angajat angajat in _companie.Angajati)
@@ -33,7 +36,7 @@ namespace Firma
             }
             angajatiComboBox.EndUpdate();
             dataMonthCalendar.ShowWeekNumbers = true;
-
+            dataGridView1.DataSource = _oreLucrate.Ore;
 
         }
 
@@ -55,16 +58,31 @@ namespace Firma
                         _angajat = angajat;
                     }
                 }
-                MessageBox.Show(_angajat.Nume);
-                Orelucrate ore = new Orelucrate(dataMonthCalendar.SelectionRange.Start.ToString("dd.MM.yyyy"), OrenumericUpDown.Value, turaNoaptecheckBox.Checked);
-                _angajat.Orelucrate.Add(ore);
+                // sender adauga numarul de ore si tipul
+                Ore ore = new Ore(_angajat.Nume, _angajat.Prenume, dataMonthCalendar.SelectionRange.Start.ToString("dd.MM.yyyy"), OrenumericUpDown.Value, turaNoaptecheckBox.Checked);
+                _oreLucrate.Ore.Add(ore);
+                // se reinitializeaza datasource
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = _oreLucrate.Ore;
+                _oreLucrate.Save();
 
-                _companie.Save();
             }
         }
 
         private void StergeButton_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                //dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    dataGridView1.Rows.RemoveAt(row.Index);
+                }
+            }
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = _oreLucrate.Ore;
+            _oreLucrate.Save();
 
         }
     }

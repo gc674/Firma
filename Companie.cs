@@ -12,7 +12,7 @@ namespace Firma
     {
         //creare lista de angajati
         public List<Angajat> Angajati;
-        public int Id { get; set; }
+        //public int Id { get; set; }
 
         private string fisierCompanie = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "companie.xml");
 

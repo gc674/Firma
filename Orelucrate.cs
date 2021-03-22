@@ -1,28 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Firma
 {
-    public class Orelucrate : Angajat
+    public class Orelucrate
     {
-        public string DataOrelor { get; set; }
-        public decimal Ore { get; set; }
-        public bool DeNoapte { get; set; }
+        //creare lista de ore per angajat
+        public BindingList<Ore> Ore;
+        private string fisierOreLucrate = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "orelucrate.xml");
 
         public Orelucrate()
         {
-            //pentru serializare
+            //constructor pentru lista de ore
+            Ore = new BindingList<Ore>();
+
         }
-        public Orelucrate (string data, decimal ore, bool denoapte)
+
+        public void Save()
         {
-            DataOrelor = data;
-            Ore = ore;
-            DeNoapte = denoapte;
+            XmlSerializer xml = new XmlSerializer(typeof(BindingList<Ore>));
+            StreamWriter streamWriter = new StreamWriter(fisierOreLucrate);
+            xml.Serialize(streamWriter, Ore);
+            streamWriter.Close();
+
         }
 
+        public void Load()
+        {
+            if (File.Exists(fisierOreLucrate))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(BindingList<Ore>));
+                StreamReader streamReader = new StreamReader(fisierOreLucrate);
+                Ore = (BindingList<Ore>)xmlSerializer.Deserialize(streamReader);
+                streamReader.Close();
+            }
 
+        }
     }
 }

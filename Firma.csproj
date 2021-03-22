@@ -60,6 +60,7 @@
     <Compile Include="Firma.Designer.cs">
       <DependentUpon>Firma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ore.cs" />
     <Compile Include="Orelucrate.cs" />
     <Compile Include="Pontaj.cs">
       <SubType>Form</SubType>

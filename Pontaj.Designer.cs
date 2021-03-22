@@ -37,7 +37,9 @@ namespace Firma
             this.Orelabel = new System.Windows.Forms.Label();
             this.OrenumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.turaNoaptecheckBox = new System.Windows.Forms.CheckBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.OrenumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // AdaugaButton
@@ -125,11 +127,21 @@ namespace Firma
             this.turaNoaptecheckBox.Text = "Tura Noapte";
             this.turaNoaptecheckBox.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(25, 247);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(546, 273);
+            this.dataGridView1.TabIndex = 8;
+            // 
             // Pontaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 391);
+            this.ClientSize = new System.Drawing.Size(598, 548);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.turaNoaptecheckBox);
             this.Controls.Add(this.OrenumericUpDown);
             this.Controls.Add(this.Orelabel);
@@ -143,6 +155,7 @@ namespace Firma
             this.Text = "Pontaj";
             this.Load += new System.EventHandler(this.Pontaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.OrenumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +171,6 @@ namespace Firma
         private System.Windows.Forms.Label Orelabel;
         private System.Windows.Forms.NumericUpDown OrenumericUpDown;
         private System.Windows.Forms.CheckBox turaNoaptecheckBox;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

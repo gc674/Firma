@@ -14,11 +14,10 @@ namespace Firma
         public string DataNasterii { get; set; }
         public string Telefon { get; set; }
 
-        public List<Orelucrate> Orelucrate;
+        //public List<Orelucrate> Orelucrate;
         public Angajat()
         {
             //constructor pentru lista de angajati
-            //Orelucrate = new List<Orelucrate>();
         }
         public Angajat (int id, string nume, string prenume, string datanasterii, string telefon)
         {
@@ -28,7 +27,7 @@ namespace Firma
             this.Prenume = prenume;
             this.DataNasterii = datanasterii;
             this.Telefon = telefon;
-            Orelucrate = new List<Orelucrate>();
+            //this.Orelucrate = new List<Orelucrate>();
 
         }
     }
