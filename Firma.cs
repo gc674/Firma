@@ -29,6 +29,10 @@ namespace Firma
             this.Visible = false;
             Angajati angajati = new Angajati();
             DialogResult raspuns = angajati.ShowDialog();
+            if (raspuns == DialogResult.Cancel)
+            {
+                Refresh(sender, e);
+            }
             this.Visible = true;
         }
 
@@ -37,6 +41,11 @@ namespace Firma
             this.Visible = false;
             Pontaj pontaj = new Pontaj();
             DialogResult raspuns = pontaj.ShowDialog();
+            if (raspuns == DialogResult.Cancel)
+            {
+                Refresh(sender, e);
+            }
+
             this.Visible = true;
 
 
@@ -46,15 +55,20 @@ namespace Firma
         {
             this.Visible = false;
             RaportAngajat raportAngajat = new RaportAngajat();
-            DialogResult raspuns = raportAngajat.ShowDialog();
+            raportAngajat.ShowDialog();
             this.Visible = true;
         }
 
-        private void Firma_Load(object sender, EventArgs e)
+        private void Refresh(object sender, EventArgs e)
         {
+            resurseListView.Items.Clear();
+            _resurse.OreNoapte = 0;
+            _resurse.OreZi = 0;
+
             _oreLucrate.Load();
             _companie.Load();
-            foreach(Ore ore in _oreLucrate.Ore)
+
+            foreach (Ore ore in _oreLucrate.Ore)
             {
                 if (ore.DeNoapte == true)
                 {
@@ -71,6 +85,7 @@ namespace Firma
 
 
             //se actualizeaza listView cu Resursele
+            
             ListViewItem item = new ListViewItem(_resurse.NrAngajati.ToString());
             item.SubItems.Add(_resurse.OreNoapte.ToString());
             item.SubItems.Add(_resurse.CostOreNoapte.ToString());
@@ -81,6 +96,12 @@ namespace Firma
             resurseListView.Sorting = SortOrder.Ascending;
 
 
+        }
+        private void Firma_Load(object sender, EventArgs e)
+        {
+            Refresh(sender, e);
+
+         
 
         }
     }
