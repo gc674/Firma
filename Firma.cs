@@ -12,8 +12,12 @@ namespace Firma
 {
     public partial class Firma : Form
     {
+        private Orelucrate _oreLucrate;
+        private Resurse _resurse;
         public Firma()
         {
+            _oreLucrate = new Orelucrate();
+            _resurse = new Resurse();
             InitializeComponent();
             
         }
@@ -42,6 +46,27 @@ namespace Firma
             RaportAngajat raportAngajat = new RaportAngajat();
             DialogResult raspuns = raportAngajat.ShowDialog();
             this.Visible = true;
+        }
+
+        private void Firma_Load(object sender, EventArgs e)
+        {
+            _oreLucrate.Load();
+            foreach(Ore ore in _oreLucrate.Ore)
+            {
+                if (ore.DeNoapte == true)
+                {
+                    _resurse.OreNoapte += ore.OreLucrate;
+                }
+                else
+                {
+                    _resurse.OreZi += ore.OreLucrate;
+                }
+            }
+
+            //MessageBox.Show(_resurse.OreNoapte.ToString());
+            //MessageBox.Show(_resurse.OreZi.ToString());
+
+
         }
     }
 }

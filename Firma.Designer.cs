@@ -32,6 +32,8 @@ namespace Firma
             this.angajatiButton = new System.Windows.Forms.Button();
             this.pontajButton = new System.Windows.Forms.Button();
             this.raportButton = new System.Windows.Forms.Button();
+            this.resurseDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.resurseDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // angajatiButton
@@ -64,17 +66,29 @@ namespace Firma
             this.raportButton.UseVisualStyleBackColor = true;
             this.raportButton.Click += new System.EventHandler(this.raportButton_Click);
             // 
+            // resurseDataGridView
+            // 
+            this.resurseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resurseDataGridView.Location = new System.Drawing.Point(52, 38);
+            this.resurseDataGridView.Name = "resurseDataGridView";
+            this.resurseDataGridView.ReadOnly = true;
+            this.resurseDataGridView.Size = new System.Drawing.Size(240, 150);
+            this.resurseDataGridView.TabIndex = 3;
+            // 
             // Firma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 366);
+            this.Controls.Add(this.resurseDataGridView);
             this.Controls.Add(this.raportButton);
             this.Controls.Add(this.pontajButton);
             this.Controls.Add(this.angajatiButton);
             this.Name = "Firma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Firma";
+            this.Load += new System.EventHandler(this.Firma_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.resurseDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -84,6 +98,7 @@ namespace Firma
         private System.Windows.Forms.Button angajatiButton;
         private System.Windows.Forms.Button pontajButton;
         private System.Windows.Forms.Button raportButton;
+        private System.Windows.Forms.DataGridView resurseDataGridView;
     }
 }
 

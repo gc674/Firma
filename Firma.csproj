@@ -76,6 +76,7 @@
     <Compile Include="RaportAngajat.Designer.cs">
       <DependentUpon>RaportAngajat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resurse.cs" />
     <EmbeddedResource Include="Angajati.resx">
       <DependentUpon>Angajati.cs</DependentUpon>
     </EmbeddedResource>
