@@ -32,13 +32,18 @@ namespace Firma
             this.angajatiButton = new System.Windows.Forms.Button();
             this.pontajButton = new System.Windows.Forms.Button();
             this.raportButton = new System.Windows.Forms.Button();
-            this.resurseDataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.resurseDataGridView)).BeginInit();
+            this.resurseListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // angajatiButton
             // 
-            this.angajatiButton.Location = new System.Drawing.Point(453, 38);
+            this.angajatiButton.Location = new System.Drawing.Point(42, 168);
             this.angajatiButton.Name = "angajatiButton";
             this.angajatiButton.Size = new System.Drawing.Size(75, 35);
             this.angajatiButton.TabIndex = 0;
@@ -48,7 +53,7 @@ namespace Firma
             // 
             // pontajButton
             // 
-            this.pontajButton.Location = new System.Drawing.Point(453, 96);
+            this.pontajButton.Location = new System.Drawing.Point(220, 166);
             this.pontajButton.Name = "pontajButton";
             this.pontajButton.Size = new System.Drawing.Size(75, 37);
             this.pontajButton.TabIndex = 1;
@@ -58,29 +63,66 @@ namespace Firma
             // 
             // raportButton
             // 
-            this.raportButton.Location = new System.Drawing.Point(453, 158);
+            this.raportButton.Location = new System.Drawing.Point(393, 168);
             this.raportButton.Name = "raportButton";
-            this.raportButton.Size = new System.Drawing.Size(75, 36);
+            this.raportButton.Size = new System.Drawing.Size(75, 35);
             this.raportButton.TabIndex = 2;
             this.raportButton.Text = "Raport Angajat";
             this.raportButton.UseVisualStyleBackColor = true;
             this.raportButton.Click += new System.EventHandler(this.raportButton_Click);
             // 
-            // resurseDataGridView
+            // resurseListView
             // 
-            this.resurseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resurseDataGridView.Location = new System.Drawing.Point(52, 38);
-            this.resurseDataGridView.Name = "resurseDataGridView";
-            this.resurseDataGridView.ReadOnly = true;
-            this.resurseDataGridView.Size = new System.Drawing.Size(240, 150);
-            this.resurseDataGridView.TabIndex = 3;
+            this.resurseListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.resurseListView.HideSelection = false;
+            this.resurseListView.Location = new System.Drawing.Point(42, 38);
+            this.resurseListView.Name = "resurseListView";
+            this.resurseListView.Size = new System.Drawing.Size(497, 103);
+            this.resurseListView.TabIndex = 3;
+            this.resurseListView.UseCompatibleStateImageBehavior = false;
+            this.resurseListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Numar angajati";
+            this.columnHeader1.Width = 90;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ore Noapte";
+            this.columnHeader2.Width = 80;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Cost Ore Noapte";
+            this.columnHeader3.Width = 100;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Ore Zi";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Cost Ore Zi";
+            this.columnHeader5.Width = 80;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Cost Total";
+            this.columnHeader6.Width = 80;
             // 
             // Firma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 366);
-            this.Controls.Add(this.resurseDataGridView);
+            this.ClientSize = new System.Drawing.Size(551, 387);
+            this.Controls.Add(this.resurseListView);
             this.Controls.Add(this.raportButton);
             this.Controls.Add(this.pontajButton);
             this.Controls.Add(this.angajatiButton);
@@ -88,7 +130,6 @@ namespace Firma
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Firma";
             this.Load += new System.EventHandler(this.Firma_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.resurseDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -98,7 +139,13 @@ namespace Firma
         private System.Windows.Forms.Button angajatiButton;
         private System.Windows.Forms.Button pontajButton;
         private System.Windows.Forms.Button raportButton;
-        private System.Windows.Forms.DataGridView resurseDataGridView;
+        private System.Windows.Forms.ListView resurseListView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
 

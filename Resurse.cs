@@ -14,20 +14,27 @@ namespace Firma
         public decimal OreZi { get; set; }
         public int NrAngajati { get; set; }
 
-        //public List<Resurse> TotalResurse;
-        public int CostOreZi { get; set; }
-        public int CostOreNoapte { get; set; }
+        public decimal CostOreZi { get; set; }
+        public decimal CostOreNoapte { get; set; }
+        public decimal CostTotal { get; set; }
 
-        private decimal CostOre = 25;
+        public decimal CostOre = 25;
+        public decimal CostOreN;
 
-        private string fisierOreLucrate = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "orelucrate.xml");
+        //private string fisierOreLucrate = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "orelucrate.xml");
         public Resurse ()
         {
             
 
         }
 
+        public void Calcul()
+        {
+            CostOreZi = OreZi * CostOre;
+            CostOreNoapte = OreNoapte * (CostOre * 2);
+            CostTotal = CostOreZi + CostOreNoapte;
 
+        }
 
     }
 }

@@ -14,10 +14,12 @@ namespace Firma
     {
         private Orelucrate _oreLucrate;
         private Resurse _resurse;
+        private Companie _companie;
         public Firma()
         {
             _oreLucrate = new Orelucrate();
             _resurse = new Resurse();
+            _companie = new Companie();
             InitializeComponent();
             
         }
@@ -51,6 +53,7 @@ namespace Firma
         private void Firma_Load(object sender, EventArgs e)
         {
             _oreLucrate.Load();
+            _companie.Load();
             foreach(Ore ore in _oreLucrate.Ore)
             {
                 if (ore.DeNoapte == true)
@@ -63,8 +66,20 @@ namespace Firma
                 }
             }
 
-            //MessageBox.Show(_resurse.OreNoapte.ToString());
-            //MessageBox.Show(_resurse.OreZi.ToString());
+            _resurse.NrAngajati = _companie.Angajati.Count;
+            _resurse.Calcul();
+
+
+            //se actualizeaza listView cu Resursele
+            ListViewItem item = new ListViewItem(_resurse.NrAngajati.ToString());
+            item.SubItems.Add(_resurse.OreNoapte.ToString());
+            item.SubItems.Add(_resurse.CostOreNoapte.ToString());
+            item.SubItems.Add(_resurse.OreZi.ToString());
+            item.SubItems.Add(_resurse.CostOreZi.ToString());
+            item.SubItems.Add(_resurse.CostTotal.ToString());
+            resurseListView.Items.Add(item);
+            resurseListView.Sorting = SortOrder.Ascending;
+
 
 
         }
