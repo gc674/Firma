@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Xml.Serialization;
-
+﻿
 namespace Firma
 {
     public class Resurse
@@ -17,11 +10,9 @@ namespace Firma
         public decimal CostOreZi { get; set; }
         public decimal CostOreNoapte { get; set; }
         public decimal CostTotal { get; set; }
-
-        public decimal CostOre = 25;
+        public decimal CostOre { get; set; }
         public decimal CostOreN;
 
-        //private string fisierOreLucrate = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "orelucrate.xml");
         public Resurse ()
         {
             
@@ -30,6 +21,9 @@ namespace Firma
 
         public void Calcul()
         {
+            ConfigFirma configFirma = new ConfigFirma();
+            configFirma = configFirma.Load(configFirma); // copiere obiect serializat in obiect
+            CostOre = configFirma.CostOra;
             CostOreZi = OreZi * CostOre;
             CostOreNoapte = OreNoapte * (CostOre * 2);
             CostTotal = CostOreZi + CostOreNoapte;

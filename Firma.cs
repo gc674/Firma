@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Firma
@@ -103,6 +96,18 @@ namespace Firma
 
          
 
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Config config = new Config();
+            DialogResult raspuns = config.ShowDialog();
+            if (raspuns == DialogResult.Cancel)
+            {
+                Refresh(sender, e);
+            }
+            this.Visible = true;
         }
     }
 }
