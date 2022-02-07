@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Firma
+namespace Company
 {
-    public partial class Firma : Form
+    public partial class Company : Form
     {
-        private Orelucrate _oreLucrate;
-        private Resurse _resurse;
-        private Companie _companie;
-        public Firma()
+        private WorkedHours _workedHours;
+        private Resources _resources;
+        private Compay _company;
+        public Company()
         {
-            _oreLucrate = new Orelucrate();
-            _resurse = new Resurse();
-            _companie = new Companie();
+            _workedHours = new WorkedHours();
+            _resources = new Resources();
+            _company = new Compay();
             InitializeComponent();
             
         }
@@ -20,9 +20,9 @@ namespace Firma
         private void angajatiButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Angajati angajati = new Angajati();
-            DialogResult raspuns = angajati.ShowDialog();
-            if (raspuns == DialogResult.Cancel)
+            Employees employees = new Employees();
+            DialogResult response = employees.ShowDialog();
+            if (response == DialogResult.Cancel)
             {
                 Refresh(sender, e);
             }
@@ -32,8 +32,8 @@ namespace Firma
         private void pontajButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Pontaj pontaj = new Pontaj();
-            DialogResult raspuns = pontaj.ShowDialog();
+            Booking booking = new Booking();
+            DialogResult raspuns = booking.ShowDialog();
             if (raspuns == DialogResult.Cancel)
             {
                 Refresh(sender, e);
@@ -47,44 +47,44 @@ namespace Firma
         private void raportButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            RaportAngajat raportAngajat = new RaportAngajat();
-            raportAngajat.ShowDialog();
+            EmployeeReport employeeReport = new EmployeeReport();
+            employeeReport.ShowDialog();
             this.Visible = true;
         }
 
         private void Refresh(object sender, EventArgs e)
         {
             resurseListView.Items.Clear();
-            _resurse.OreNoapte = 0;
-            _resurse.OreZi = 0;
+            _resources.NightHours = 0;
+            _resources.DayHours = 0;
 
-            _oreLucrate.Load();
-            _companie.Load();
+            _workedHours.Load();
+            _company.Load();
 
-            foreach (Ore ore in _oreLucrate.Ore)
+            foreach (Hours hours in _workedHours.Hours)
             {
-                if (ore.DeNoapte == true)
+                if (hours.Night == true)
                 {
-                    _resurse.OreNoapte += ore.OreLucrate;
+                    _resources.NightHours += hours.WorkedHours;
                 }
                 else
                 {
-                    _resurse.OreZi += ore.OreLucrate;
+                    _resources.DayHours += hours.WorkedHours;
                 }
             }
 
-            _resurse.NrAngajati = _companie.Angajati.Count;
-            _resurse.Calcul();
+            _resources.EmployeeNumber = _company.Employees.Count;
+            _resources.Calcul();
 
 
             //se actualizeaza listView cu Resursele
             
-            ListViewItem item = new ListViewItem(_resurse.NrAngajati.ToString());
-            item.SubItems.Add(_resurse.OreNoapte.ToString());
-            item.SubItems.Add(_resurse.CostOreNoapte.ToString());
-            item.SubItems.Add(_resurse.OreZi.ToString());
-            item.SubItems.Add(_resurse.CostOreZi.ToString());
-            item.SubItems.Add(_resurse.CostTotal.ToString());
+            ListViewItem item = new ListViewItem(_resources.EmployeeNumber.ToString());
+            item.SubItems.Add(_resources.NightHours.ToString());
+            item.SubItems.Add(_resources.NightHoursCost.ToString());
+            item.SubItems.Add(_resources.DayHours.ToString());
+            item.SubItems.Add(_resources.DayHoursCost.ToString());
+            item.SubItems.Add(_resources.TotalCost.ToString());
             resurseListView.Items.Add(item);
             resurseListView.Sorting = SortOrder.Ascending;
 

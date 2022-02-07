@@ -1,7 +1,7 @@
 ﻿
-namespace Firma
+namespace Company
 {
-    partial class Pontaj
+    partial class Booking
     {
         /// <summary>
         /// Required designer variable.
@@ -48,7 +48,7 @@ namespace Firma
             this.AdaugaButton.Name = "AdaugaButton";
             this.AdaugaButton.Size = new System.Drawing.Size(75, 38);
             this.AdaugaButton.TabIndex = 0;
-            this.AdaugaButton.Text = "Adauga";
+            this.AdaugaButton.Text = "Add";
             this.AdaugaButton.UseVisualStyleBackColor = true;
             this.AdaugaButton.Click += new System.EventHandler(this.AdaugaButton_Click);
             // 
@@ -58,7 +58,7 @@ namespace Firma
             this.StergeButton.Name = "StergeButton";
             this.StergeButton.Size = new System.Drawing.Size(75, 39);
             this.StergeButton.TabIndex = 1;
-            this.StergeButton.Text = "Sterge";
+            this.StergeButton.Text = "Delete";
             this.StergeButton.UseVisualStyleBackColor = true;
             this.StergeButton.Click += new System.EventHandler(this.StergeButton_Click);
             // 
@@ -80,20 +80,20 @@ namespace Firma
             // AngajatLabel
             // 
             this.AngajatLabel.AutoSize = true;
-            this.AngajatLabel.Location = new System.Drawing.Point(22, 9);
+            this.AngajatLabel.Location = new System.Drawing.Point(12, 9);
             this.AngajatLabel.Name = "AngajatLabel";
-            this.AngajatLabel.Size = new System.Drawing.Size(43, 13);
+            this.AngajatLabel.Size = new System.Drawing.Size(53, 13);
             this.AngajatLabel.TabIndex = 4;
-            this.AngajatLabel.Text = "Angajat";
+            this.AngajatLabel.Text = "Employee";
             // 
             // Orelabel
             // 
             this.Orelabel.AutoSize = true;
             this.Orelabel.Location = new System.Drawing.Point(22, 214);
             this.Orelabel.Name = "Orelabel";
-            this.Orelabel.Size = new System.Drawing.Size(24, 13);
+            this.Orelabel.Size = new System.Drawing.Size(35, 13);
             this.Orelabel.TabIndex = 5;
-            this.Orelabel.Text = "Ore";
+            this.Orelabel.Text = "Hours";
             // 
             // OrenumericUpDown
             // 
@@ -122,9 +122,9 @@ namespace Firma
             this.turaNoaptecheckBox.AutoSize = true;
             this.turaNoaptecheckBox.Location = new System.Drawing.Point(145, 215);
             this.turaNoaptecheckBox.Name = "turaNoaptecheckBox";
-            this.turaNoaptecheckBox.Size = new System.Drawing.Size(86, 17);
+            this.turaNoaptecheckBox.Size = new System.Drawing.Size(75, 17);
             this.turaNoaptecheckBox.TabIndex = 7;
-            this.turaNoaptecheckBox.Text = "Tura Noapte";
+            this.turaNoaptecheckBox.Text = "Night Shift";
             this.turaNoaptecheckBox.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -136,7 +136,7 @@ namespace Firma
             this.dataGridView1.Size = new System.Drawing.Size(546, 273);
             this.dataGridView1.TabIndex = 8;
             // 
-            // Pontaj
+            // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -150,9 +150,9 @@ namespace Firma
             this.Controls.Add(this.dataMonthCalendar);
             this.Controls.Add(this.StergeButton);
             this.Controls.Add(this.AdaugaButton);
-            this.Name = "Pontaj";
+            this.Name = "Booking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pontaj";
+            this.Text = "Booking";
             this.Load += new System.EventHandler(this.Pontaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.OrenumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Firma
+namespace Company
 {
-    public partial class Angajati : Form
+    public partial class Employees : Form
     {
-        private Companie _companie;
-        public Angajati()
+        private Compay _company;
+        public Employees()
         {
 
-            _companie = new Companie();
+            _company = new Compay();
             InitializeComponent();
 
         }
@@ -18,25 +18,25 @@ namespace Firma
         {
             if (string.IsNullOrWhiteSpace(numeBox.Text) || string.IsNullOrWhiteSpace(prenumeBox.Text) || string.IsNullOrWhiteSpace(dateTimePicker1.Text) || string.IsNullOrWhiteSpace(telefonBox.Text))
             {
-                MessageBox.Show("Unul dintre campuri nu este completat corespunzator!");
+                MessageBox.Show("Please check inputed values!");
 
             }
             else
             {
-                //se adauga angajat
-                Angajat angajat = new Angajat(Convert.ToInt32(idNumericUpDown.Value),
+                //add an employee
+                Employee employee = new Employee(Convert.ToInt32(idNumericUpDown.Value),
                                               numeBox.Text.Trim(),
                                               prenumeBox.Text.Trim(),
                                               dateTimePicker1.Value.ToString("dd.MM.yyyy"),
                                               telefonBox.Text.Trim());
-                _companie.Angajati.Add(angajat);
+                _company.Employees.Add(employee);
 
                 //se actualizeaza listView cu angajatul introdus
-                ListViewItem item = new ListViewItem(angajat.Id.ToString());
-                item.SubItems.Add(angajat.Nume);
-                item.SubItems.Add(angajat.Prenume);
-                item.SubItems.Add(angajat.DataNasterii);
-                item.SubItems.Add(angajat.Telefon);
+                ListViewItem item = new ListViewItem(employee.Id.ToString());
+                item.SubItems.Add(employee.First);
+                item.SubItems.Add(employee.Last);
+                item.SubItems.Add(employee.BirthDate);
+                item.SubItems.Add(employee.Phone);
                 angajatiListView.Items.Add(item);
                 angajatiListView.Sorting = SortOrder.Ascending;
                 numeBox.Clear();
@@ -45,10 +45,10 @@ namespace Firma
                 numeBox.Focus();
                 //MessageBox.Show(string.Format("Am adaugat angajatul: {0} {1} {2} {3}", angajat.Nume, angajat.Prenume, angajat.DataNasterii, angajat.Telefon));
                 //se actualizeaza NumericBoxul cu id angajat
-                idNumericUpDown.Value = _companie.Angajati.Count;
+                idNumericUpDown.Value = _company.Employees.Count;
                 idNumericUpDown.Refresh();
                 //se salveaza lista de angajati
-                _companie.Save();
+                _company.Save();
 
             }
 
@@ -65,33 +65,38 @@ namespace Firma
                 //MessageBox.Show("Id selectat " + id);
                 angajatiListView.Items.Remove(item);
                 //stergere dupa Id din clasa companie
-                _companie.Angajati.Remove(_companie.Angajati.Find(x => x.Id == id));
-                _companie.Save();
+                _company.Employees.Remove(_company.Employees.Find(x => x.Id == id));
+                _company.Save();
 
             }
             else
             {
-                MessageBox.Show("Nu este nici un rand selectat!");
+                MessageBox.Show("Please select a row!");
             }
         }
 
         private void Angajati_Load(object sender, EventArgs e)
         {
-            _companie.Load();
+            _company.Load();
             //creaza lista cu elementele din clasa companie din xml
-            foreach (Angajat ang in _companie.Angajati)
+            foreach (Employee empl in _company.Employees)
             {
 
-                ListViewItem item = new ListViewItem(ang.Id.ToString());
-                item.SubItems.Add(ang.Nume);
-                item.SubItems.Add(ang.Prenume);
-                item.SubItems.Add(ang.DataNasterii);
-                item.SubItems.Add(ang.Telefon);
+                ListViewItem item = new ListViewItem(empl.Id.ToString());
+                item.SubItems.Add(empl.First);
+                item.SubItems.Add(empl.Last);
+                item.SubItems.Add(empl.BirthDate);
+                item.SubItems.Add(empl.Phone);
                 angajatiListView.Items.Add(item);
             }
             idNumericUpDown.Enabled = false;
-            idNumericUpDown.Value = _companie.Angajati.Count;
+            idNumericUpDown.Value = _company.Employees.Count;
             idNumericUpDown.Refresh();
+
+        }
+
+        private void numeLabel_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -1,7 +1,7 @@
 ﻿
-namespace Firma
+namespace Company
 {
-    partial class Firma
+    partial class Company
     {
         /// <summary>
         /// Required designer variable.
@@ -48,7 +48,7 @@ namespace Firma
             this.angajatiButton.Name = "angajatiButton";
             this.angajatiButton.Size = new System.Drawing.Size(75, 35);
             this.angajatiButton.TabIndex = 0;
-            this.angajatiButton.Text = "Angajati";
+            this.angajatiButton.Text = "Employees";
             this.angajatiButton.UseVisualStyleBackColor = true;
             this.angajatiButton.Click += new System.EventHandler(this.angajatiButton_Click);
             // 
@@ -58,7 +58,7 @@ namespace Firma
             this.pontajButton.Name = "pontajButton";
             this.pontajButton.Size = new System.Drawing.Size(75, 37);
             this.pontajButton.TabIndex = 1;
-            this.pontajButton.Text = "Pontaj";
+            this.pontajButton.Text = "Booking";
             this.pontajButton.UseVisualStyleBackColor = true;
             this.pontajButton.Click += new System.EventHandler(this.pontajButton_Click);
             // 
@@ -68,7 +68,7 @@ namespace Firma
             this.raportButton.Name = "raportButton";
             this.raportButton.Size = new System.Drawing.Size(75, 35);
             this.raportButton.TabIndex = 2;
-            this.raportButton.Text = "Raport Angajat";
+            this.raportButton.Text = "Employee Report";
             this.raportButton.UseVisualStyleBackColor = true;
             this.raportButton.Click += new System.EventHandler(this.raportButton_Click);
             // 
@@ -91,31 +91,31 @@ namespace Firma
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Numar angajati";
-            this.columnHeader1.Width = 90;
+            this.columnHeader1.Text = "Employees Nr";
+            this.columnHeader1.Width = 93;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Ore Noapte";
+            this.columnHeader2.Text = "Night Hours";
             this.columnHeader2.Width = 80;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Cost Ore Noapte";
+            this.columnHeader3.Text = "Night Hours Cost";
             this.columnHeader3.Width = 100;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Ore Zi";
+            this.columnHeader4.Text = "Day Hours";
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Cost Ore Zi";
+            this.columnHeader5.Text = "Day Hours Cost";
             this.columnHeader5.Width = 80;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Cost Total";
+            this.columnHeader6.Text = "Total Cost";
             this.columnHeader6.Width = 80;
             // 
             // settingsButton
@@ -124,11 +124,11 @@ namespace Firma
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(75, 21);
             this.settingsButton.TabIndex = 4;
-            this.settingsButton.Text = "Configuratie";
+            this.settingsButton.Text = "Config";
             this.settingsButton.UseVisualStyleBackColor = true;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
-            // Firma
+            // Company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,9 +138,9 @@ namespace Firma
             this.Controls.Add(this.raportButton);
             this.Controls.Add(this.pontajButton);
             this.Controls.Add(this.angajatiButton);
-            this.Name = "Firma";
+            this.Name = "Company";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Firma";
+            this.Text = "Company";
             this.Load += new System.EventHandler(this.Firma_Load);
             this.ResumeLayout(false);
 

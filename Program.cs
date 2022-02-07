@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Firma
+namespace Company
 {
     static class Program
     {
@@ -13,7 +13,7 @@ namespace Firma
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Firma());
+            Application.Run(new Company());
         }
     }
 }

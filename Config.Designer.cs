@@ -1,5 +1,5 @@
 ﻿
-namespace Firma
+namespace Company
 {
     partial class Config
     {
@@ -40,20 +40,21 @@ namespace Firma
             // costOraLabel
             // 
             this.costOraLabel.AutoSize = true;
-            this.costOraLabel.Location = new System.Drawing.Point(55, 57);
+            this.costOraLabel.Location = new System.Drawing.Point(12, 53);
             this.costOraLabel.Name = "costOraLabel";
-            this.costOraLabel.Size = new System.Drawing.Size(48, 13);
+            this.costOraLabel.Size = new System.Drawing.Size(61, 13);
             this.costOraLabel.TabIndex = 0;
-            this.costOraLabel.Text = "Cost Ora";
+            this.costOraLabel.Text = "Hourly Cost";
             // 
             // numeFirmaLabel
             // 
             this.numeFirmaLabel.AutoSize = true;
-            this.numeFirmaLabel.Location = new System.Drawing.Point(40, 24);
+            this.numeFirmaLabel.Location = new System.Drawing.Point(12, 24);
             this.numeFirmaLabel.Name = "numeFirmaLabel";
-            this.numeFirmaLabel.Size = new System.Drawing.Size(63, 13);
+            this.numeFirmaLabel.Size = new System.Drawing.Size(82, 13);
             this.numeFirmaLabel.TabIndex = 1;
-            this.numeFirmaLabel.Text = "Nume Firma";
+            this.numeFirmaLabel.Text = "Company Name";
+            this.numeFirmaLabel.Click += new System.EventHandler(this.numeFirmaLabel_Click);
             // 
             // numeFirmaTextBox
             // 
@@ -80,7 +81,7 @@ namespace Firma
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 4;
-            this.saveButton.Text = "Salvare";
+            this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 

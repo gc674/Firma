@@ -1,7 +1,7 @@
 ﻿
-namespace Firma
+namespace Company
 {
-    partial class RaportAngajat
+    partial class EmployeeReport
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@ namespace Firma
             // angajatComboBox
             // 
             this.angajatComboBox.FormattingEnabled = true;
-            this.angajatComboBox.Location = new System.Drawing.Point(78, 13);
+            this.angajatComboBox.Location = new System.Drawing.Point(81, 28);
             this.angajatComboBox.Name = "angajatComboBox";
             this.angajatComboBox.Size = new System.Drawing.Size(121, 21);
             this.angajatComboBox.TabIndex = 0;
@@ -49,11 +49,11 @@ namespace Firma
             // angajatLabel
             // 
             this.angajatLabel.AutoSize = true;
-            this.angajatLabel.Location = new System.Drawing.Point(29, 16);
+            this.angajatLabel.Location = new System.Drawing.Point(23, 31);
             this.angajatLabel.Name = "angajatLabel";
-            this.angajatLabel.Size = new System.Drawing.Size(43, 13);
+            this.angajatLabel.Size = new System.Drawing.Size(53, 13);
             this.angajatLabel.TabIndex = 1;
-            this.angajatLabel.Text = "Angajat";
+            this.angajatLabel.Text = "Employee";
             // 
             // raportDataGridView
             // 
@@ -65,32 +65,32 @@ namespace Firma
             // 
             // raportButton
             // 
-            this.raportButton.Location = new System.Drawing.Point(482, 10);
+            this.raportButton.Location = new System.Drawing.Point(492, 20);
             this.raportButton.Name = "raportButton";
             this.raportButton.Size = new System.Drawing.Size(75, 34);
             this.raportButton.TabIndex = 3;
-            this.raportButton.Text = "Genereaza Raport";
+            this.raportButton.Text = "Generate Report";
             this.raportButton.UseVisualStyleBackColor = true;
             this.raportButton.Click += new System.EventHandler(this.raportButton_Click);
             // 
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(336, 404);
+            this.totalLabel.Location = new System.Drawing.Point(208, 36);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(51, 13);
+            this.totalLabel.Size = new System.Drawing.Size(62, 13);
             this.totalLabel.TabIndex = 4;
-            this.totalLabel.Text = "Total Ore";
+            this.totalLabel.Text = "Total Hours";
             // 
             // oreLabel
             // 
             this.oreLabel.AutoSize = true;
-            this.oreLabel.Location = new System.Drawing.Point(393, 404);
+            this.oreLabel.Location = new System.Drawing.Point(276, 36);
             this.oreLabel.Name = "oreLabel";
             this.oreLabel.Size = new System.Drawing.Size(0, 13);
             this.oreLabel.TabIndex = 5;
             // 
-            // RaportAngajat
+            // EmployeeReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,9 +101,9 @@ namespace Firma
             this.Controls.Add(this.raportDataGridView);
             this.Controls.Add(this.angajatLabel);
             this.Controls.Add(this.angajatComboBox);
-            this.Name = "RaportAngajat";
+            this.Name = "EmployeeReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RaportAngajat";
+            this.Text = "Employee Report";
             this.Load += new System.EventHandler(this.RaportAngajat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.raportDataGridView)).EndInit();
             this.ResumeLayout(false);
