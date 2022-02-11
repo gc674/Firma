@@ -214,7 +214,7 @@ namespace Company
             this.Controls.Add(this.numeLabel);
             this.Name = "Employees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Angajati";
+            this.Text = "Employees";
             this.Load += new System.EventHandler(this.Angajati_Load);
             ((System.ComponentModel.ISupportInitialize)(this.idNumericUpDown)).EndInit();
             this.ResumeLayout(false);

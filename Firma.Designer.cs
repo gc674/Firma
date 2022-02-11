@@ -54,7 +54,7 @@ namespace Company
             // 
             // pontajButton
             // 
-            this.pontajButton.Location = new System.Drawing.Point(220, 166);
+            this.pontajButton.Location = new System.Drawing.Point(250, 166);
             this.pontajButton.Name = "pontajButton";
             this.pontajButton.Size = new System.Drawing.Size(75, 37);
             this.pontajButton.TabIndex = 1;
@@ -64,7 +64,7 @@ namespace Company
             // 
             // raportButton
             // 
-            this.raportButton.Location = new System.Drawing.Point(393, 168);
+            this.raportButton.Location = new System.Drawing.Point(457, 166);
             this.raportButton.Name = "raportButton";
             this.raportButton.Size = new System.Drawing.Size(75, 35);
             this.raportButton.TabIndex = 2;
@@ -84,15 +84,15 @@ namespace Company
             this.resurseListView.HideSelection = false;
             this.resurseListView.Location = new System.Drawing.Point(42, 38);
             this.resurseListView.Name = "resurseListView";
-            this.resurseListView.Size = new System.Drawing.Size(497, 103);
+            this.resurseListView.Size = new System.Drawing.Size(490, 103);
             this.resurseListView.TabIndex = 3;
             this.resurseListView.UseCompatibleStateImageBehavior = false;
             this.resurseListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Employees Nr";
-            this.columnHeader1.Width = 93;
+            this.columnHeader1.Text = "Employees";
+            this.columnHeader1.Width = 75;
             // 
             // columnHeader2
             // 
@@ -102,16 +102,17 @@ namespace Company
             // columnHeader3
             // 
             this.columnHeader3.Text = "Night Hours Cost";
-            this.columnHeader3.Width = 100;
+            this.columnHeader3.Width = 93;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Day Hours";
+            this.columnHeader4.Width = 65;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Day Hours Cost";
-            this.columnHeader5.Width = 80;
+            this.columnHeader5.Width = 93;
             // 
             // columnHeader6
             // 
@@ -132,7 +133,7 @@ namespace Company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 387);
+            this.ClientSize = new System.Drawing.Size(575, 387);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.resurseListView);
             this.Controls.Add(this.raportButton);

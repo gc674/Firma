@@ -60,12 +60,12 @@ namespace Company
             this.raportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.raportDataGridView.Location = new System.Drawing.Point(41, 141);
             this.raportDataGridView.Name = "raportDataGridView";
-            this.raportDataGridView.Size = new System.Drawing.Size(526, 256);
+            this.raportDataGridView.Size = new System.Drawing.Size(724, 256);
             this.raportDataGridView.TabIndex = 2;
             // 
             // raportButton
             // 
-            this.raportButton.Location = new System.Drawing.Point(492, 20);
+            this.raportButton.Location = new System.Drawing.Point(690, 28);
             this.raportButton.Name = "raportButton";
             this.raportButton.Size = new System.Drawing.Size(75, 34);
             this.raportButton.TabIndex = 3;
@@ -94,7 +94,7 @@ namespace Company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 450);
+            this.ClientSize = new System.Drawing.Size(808, 450);
             this.Controls.Add(this.oreLabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.raportButton);

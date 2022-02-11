@@ -44,7 +44,7 @@ namespace Company
             // 
             // AdaugaButton
             // 
-            this.AdaugaButton.Location = new System.Drawing.Point(469, 12);
+            this.AdaugaButton.Location = new System.Drawing.Point(689, 40);
             this.AdaugaButton.Name = "AdaugaButton";
             this.AdaugaButton.Size = new System.Drawing.Size(75, 38);
             this.AdaugaButton.TabIndex = 0;
@@ -54,7 +54,7 @@ namespace Company
             // 
             // StergeButton
             // 
-            this.StergeButton.Location = new System.Drawing.Point(469, 67);
+            this.StergeButton.Location = new System.Drawing.Point(689, 163);
             this.StergeButton.Name = "StergeButton";
             this.StergeButton.Size = new System.Drawing.Size(75, 39);
             this.StergeButton.TabIndex = 1;
@@ -129,18 +129,20 @@ namespace Company
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Location = new System.Drawing.Point(25, 247);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(546, 273);
+            this.dataGridView1.Size = new System.Drawing.Size(739, 273);
             this.dataGridView1.TabIndex = 8;
             // 
             // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 548);
+            this.ClientSize = new System.Drawing.Size(790, 548);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.turaNoaptecheckBox);
             this.Controls.Add(this.OrenumericUpDown);

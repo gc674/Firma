@@ -58,10 +58,10 @@ namespace Company
                         _employee = employee;
                     }
                 }
-                // adding number oh hours and type
+                // adding number of hours and type
                 Hours hours = new Hours(_employee.First, _employee.Last, dataMonthCalendar.SelectionRange.Start.ToString("dd.MM.yyyy"), OrenumericUpDown.Value, turaNoaptecheckBox.Checked);
                 _workedhours.Hours.Add(hours);
-                // se reinitializeaza datasource
+                // reinitializing datasource
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = _workedhours.Hours;
                 _workedhours.Save();

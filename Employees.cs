@@ -31,7 +31,7 @@ namespace Company
                                               telefonBox.Text.Trim());
                 _company.Employees.Add(employee);
 
-                //se actualizeaza listView cu angajatul introdus
+                //updating listView with the employee
                 ListViewItem item = new ListViewItem(employee.Id.ToString());
                 item.SubItems.Add(employee.First);
                 item.SubItems.Add(employee.Last);
