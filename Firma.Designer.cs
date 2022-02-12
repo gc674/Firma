@@ -45,7 +45,7 @@ namespace Company
             // 
             // angajatiButton
             // 
-            this.angajatiButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.angajatiButton.BackColor = System.Drawing.Color.Khaki;
             this.angajatiButton.Location = new System.Drawing.Point(42, 168);
             this.angajatiButton.Name = "angajatiButton";
             this.angajatiButton.Size = new System.Drawing.Size(75, 35);
@@ -56,7 +56,7 @@ namespace Company
             // 
             // pontajButton
             // 
-            this.pontajButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pontajButton.BackColor = System.Drawing.Color.Khaki;
             this.pontajButton.Location = new System.Drawing.Point(250, 166);
             this.pontajButton.Name = "pontajButton";
             this.pontajButton.Size = new System.Drawing.Size(75, 37);
@@ -67,7 +67,7 @@ namespace Company
             // 
             // raportButton
             // 
-            this.raportButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.raportButton.BackColor = System.Drawing.Color.Khaki;
             this.raportButton.Location = new System.Drawing.Point(457, 166);
             this.raportButton.Name = "raportButton";
             this.raportButton.Size = new System.Drawing.Size(75, 35);
@@ -125,7 +125,7 @@ namespace Company
             // 
             // settingsButton
             // 
-            this.settingsButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.settingsButton.BackColor = System.Drawing.Color.Khaki;
             this.settingsButton.Location = new System.Drawing.Point(393, 354);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(75, 21);

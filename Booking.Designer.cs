@@ -45,7 +45,7 @@ namespace Company
             // 
             // AdaugaButton
             // 
-            this.AdaugaButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.AdaugaButton.BackColor = System.Drawing.Color.Khaki;
             this.AdaugaButton.Location = new System.Drawing.Point(689, 40);
             this.AdaugaButton.Name = "AdaugaButton";
             this.AdaugaButton.Size = new System.Drawing.Size(75, 38);
@@ -56,7 +56,7 @@ namespace Company
             // 
             // StergeButton
             // 
-            this.StergeButton.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.StergeButton.BackColor = System.Drawing.Color.Khaki;
             this.StergeButton.Location = new System.Drawing.Point(689, 163);
             this.StergeButton.Name = "StergeButton";
             this.StergeButton.Size = new System.Drawing.Size(75, 39);
@@ -137,6 +137,7 @@ namespace Company
             // 
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Location = new System.Drawing.Point(25, 247);
             this.dataGridView1.Name = "dataGridView1";

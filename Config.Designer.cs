@@ -80,8 +80,8 @@ namespace Company
             // 
             // saveButton
             // 
-            this.saveButton.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.saveButton.Location = new System.Drawing.Point(119, 207);
+            this.saveButton.BackColor = System.Drawing.Color.Khaki;
+            this.saveButton.Location = new System.Drawing.Point(110, 77);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 4;
@@ -94,7 +94,8 @@ namespace Company
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(329, 450);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(396, 352);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.costOreNumericUpDown);
             this.Controls.Add(this.numeFirmaTextBox);

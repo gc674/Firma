@@ -123,7 +123,7 @@ namespace Company
             // 
             // adaugaButton
             // 
-            this.adaugaButton.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.adaugaButton.BackColor = System.Drawing.Color.Khaki;
             this.adaugaButton.Location = new System.Drawing.Point(557, 29);
             this.adaugaButton.Name = "adaugaButton";
             this.adaugaButton.Size = new System.Drawing.Size(80, 37);
@@ -176,7 +176,7 @@ namespace Company
             // 
             // StergeButton
             // 
-            this.StergeButton.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.StergeButton.BackColor = System.Drawing.Color.Khaki;
             this.StergeButton.Location = new System.Drawing.Point(557, 92);
             this.StergeButton.Name = "StergeButton";
             this.StergeButton.Size = new System.Drawing.Size(80, 37);

@@ -46,7 +46,7 @@ namespace Company
             else
             {
                 //default settings
-                companyConfig.CompanyName = "Company";
+                companyConfig.CompanyName = "Blabla Inc.";
                 companyConfig.HourCost = 25;
             }
 

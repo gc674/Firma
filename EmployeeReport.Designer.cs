@@ -70,7 +70,7 @@ namespace Company
             // 
             // raportButton
             // 
-            this.raportButton.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.raportButton.BackColor = System.Drawing.Color.Khaki;
             this.raportButton.Location = new System.Drawing.Point(690, 28);
             this.raportButton.Name = "raportButton";
             this.raportButton.Size = new System.Drawing.Size(75, 34);
@@ -83,7 +83,7 @@ namespace Company
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.totalLabel.Location = new System.Drawing.Point(208, 36);
+            this.totalLabel.Location = new System.Drawing.Point(208, 31);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(62, 13);
             this.totalLabel.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace Company
             // oreLabel
             // 
             this.oreLabel.AutoSize = true;
-            this.oreLabel.Location = new System.Drawing.Point(276, 36);
+            this.oreLabel.Location = new System.Drawing.Point(276, 31);
             this.oreLabel.Name = "oreLabel";
             this.oreLabel.Size = new System.Drawing.Size(0, 13);
             this.oreLabel.TabIndex = 5;
