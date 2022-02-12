@@ -7,15 +7,14 @@ namespace Company
 {
     public class WorkedHours
     {
-        //creating hour listper employee
+        //creating hour list per employee
         public BindingList<Hours> Hours;
         public decimal TotalOre { get; set; }
-        //private string fisierOreLucrate = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "orelucrate.xml");
         private string workedHoursFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "workedhours.xml");
 
         public WorkedHours()
         {
-            //constructor pentru lista de ore
+            // hours constructor
             Hours = new BindingList<Hours>();
 
         }

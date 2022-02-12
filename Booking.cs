@@ -73,7 +73,6 @@ namespace Company
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                //dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
 
                 foreach (DataGridViewRow row in dataGridView1.SelectedRows)
                 {
