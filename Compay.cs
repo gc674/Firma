@@ -12,9 +12,7 @@ namespace Company
     {
         //creare lista de angajati
         public List<Employee> Employees;
-        //public int Id { get; set; }
 
-        //private string companyFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "company.xml");
         private string companyFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "company.xml");
         public Compay()
         {
@@ -28,7 +26,6 @@ namespace Company
             XmlSerializer xml = new XmlSerializer(typeof(List<Employee>));
             StreamWriter streamWriter = new StreamWriter(companyFile);
             xml.Serialize(streamWriter, Employees);
-            //xml.Serialize(streamWriter, dataGridView1.DataSource);
             streamWriter.Close();
 
         }

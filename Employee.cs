@@ -14,20 +14,18 @@ namespace Company
         public string BirthDate { get; set; }
         public string Phone { get; set; }
 
-        //public List<Orelucrate> Orelucrate;
         public Employee()
         {
             //constructor for employees list
         }
         public Employee (int id, string first, string last, string birthdate, string phone)
         {
-            //constructor de adaugat Id
+            //constructor for id
             this.Id = id;
             this.First = first;
             this.Last = last;
             this.BirthDate = birthdate;
             this.Phone = phone;
-            //this.Orelucrate = new List<Orelucrate>();
 
         }
     }

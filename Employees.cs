@@ -43,11 +43,10 @@ namespace Company
                 prenumeBox.Clear();
                 telefonBox.Clear();
                 numeBox.Focus();
-                //MessageBox.Show(string.Format("Am adaugat angajatul: {0} {1} {2} {3}", angajat.Nume, angajat.Prenume, angajat.DataNasterii, angajat.Telefon));
-                //se actualizeaza NumericBoxul cu id angajat
+                //update NumericBox with employee id
                 idNumericUpDown.Value = _company.Employees.Count;
                 idNumericUpDown.Refresh();
-                //se salveaza lista de angajati
+                //save employees list
                 _company.Save();
 
             }
@@ -62,9 +61,8 @@ namespace Company
                 //verificare id
                 ListViewItem item = angajatiListView.SelectedItems[0];
                 int id = Convert.ToInt32(item.Text);
-                //MessageBox.Show("Id selectat " + id);
                 angajatiListView.Items.Remove(item);
-                //stergere dupa Id din clasa companie
+                //delete from id from from Compay
                 _company.Employees.Remove(_company.Employees.Find(x => x.Id == id));
                 _company.Save();
 
@@ -78,7 +76,7 @@ namespace Company
         private void Angajati_Load(object sender, EventArgs e)
         {
             _company.Load();
-            //creaza lista cu elementele din clasa companie din xml
+            //create a list with elements from Compay class from xml
             foreach (Employee empl in _company.Employees)
             {
 
