@@ -23,7 +23,7 @@ namespace Company
         public void Calcul()
         {
             CompanyConfig companyConfig = new CompanyConfig();
-            companyConfig = companyConfig.Load(companyConfig); // copiere obiect serializat in obiect
+            companyConfig = companyConfig.Load(companyConfig); // load serialized object
             HourCost = companyConfig.HourCost;
             DayHoursCost = DayHours * HourCost;
             NightHoursCost = NightHours * (HourCost * HourCostN);

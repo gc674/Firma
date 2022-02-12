@@ -18,7 +18,7 @@ namespace Company
         {
             if (string.IsNullOrWhiteSpace(numeBox.Text) || string.IsNullOrWhiteSpace(prenumeBox.Text) || string.IsNullOrWhiteSpace(dateTimePicker1.Text) || string.IsNullOrWhiteSpace(telefonBox.Text))
             {
-                MessageBox.Show("Please check inputed values!");
+                MessageBox.Show("Please check fields values!");
 
             }
             else

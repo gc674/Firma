@@ -59,6 +59,8 @@ namespace Company
             // 
             // raportDataGridView
             // 
+            this.raportDataGridView.AllowUserToResizeColumns = false;
+            this.raportDataGridView.AllowUserToResizeRows = false;
             this.raportDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.raportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.raportDataGridView.Location = new System.Drawing.Point(41, 141);
