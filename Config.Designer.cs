@@ -29,6 +29,7 @@ namespace Company
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Config));
             this.costOraLabel = new System.Windows.Forms.Label();
             this.numeFirmaLabel = new System.Windows.Forms.Label();
             this.numeFirmaTextBox = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@ namespace Company
             // costOraLabel
             // 
             this.costOraLabel.AutoSize = true;
+            this.costOraLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.costOraLabel.Location = new System.Drawing.Point(12, 53);
             this.costOraLabel.Name = "costOraLabel";
             this.costOraLabel.Size = new System.Drawing.Size(61, 13);
@@ -49,6 +51,7 @@ namespace Company
             // numeFirmaLabel
             // 
             this.numeFirmaLabel.AutoSize = true;
+            this.numeFirmaLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.numeFirmaLabel.Location = new System.Drawing.Point(12, 24);
             this.numeFirmaLabel.Name = "numeFirmaLabel";
             this.numeFirmaLabel.Size = new System.Drawing.Size(82, 13);
@@ -77,24 +80,27 @@ namespace Company
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.saveButton.Location = new System.Drawing.Point(119, 207);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 4;
             this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // Config
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(329, 450);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.costOreNumericUpDown);
             this.Controls.Add(this.numeFirmaTextBox);
             this.Controls.Add(this.numeFirmaLabel);
             this.Controls.Add(this.costOraLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Config";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Config";

@@ -29,6 +29,7 @@ namespace Company
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Booking));
             this.AdaugaButton = new System.Windows.Forms.Button();
             this.StergeButton = new System.Windows.Forms.Button();
             this.dataMonthCalendar = new System.Windows.Forms.MonthCalendar();
@@ -44,22 +45,24 @@ namespace Company
             // 
             // AdaugaButton
             // 
+            this.AdaugaButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.AdaugaButton.Location = new System.Drawing.Point(689, 40);
             this.AdaugaButton.Name = "AdaugaButton";
             this.AdaugaButton.Size = new System.Drawing.Size(75, 38);
             this.AdaugaButton.TabIndex = 0;
             this.AdaugaButton.Text = "Add";
-            this.AdaugaButton.UseVisualStyleBackColor = true;
+            this.AdaugaButton.UseVisualStyleBackColor = false;
             this.AdaugaButton.Click += new System.EventHandler(this.AdaugaButton_Click);
             // 
             // StergeButton
             // 
+            this.StergeButton.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.StergeButton.Location = new System.Drawing.Point(689, 163);
             this.StergeButton.Name = "StergeButton";
             this.StergeButton.Size = new System.Drawing.Size(75, 39);
             this.StergeButton.TabIndex = 1;
             this.StergeButton.Text = "Delete";
-            this.StergeButton.UseVisualStyleBackColor = true;
+            this.StergeButton.UseVisualStyleBackColor = false;
             this.StergeButton.Click += new System.EventHandler(this.StergeButton_Click);
             // 
             // dataMonthCalendar
@@ -80,6 +83,7 @@ namespace Company
             // AngajatLabel
             // 
             this.AngajatLabel.AutoSize = true;
+            this.AngajatLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.AngajatLabel.Location = new System.Drawing.Point(12, 9);
             this.AngajatLabel.Name = "AngajatLabel";
             this.AngajatLabel.Size = new System.Drawing.Size(53, 13);
@@ -89,6 +93,7 @@ namespace Company
             // Orelabel
             // 
             this.Orelabel.AutoSize = true;
+            this.Orelabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Orelabel.Location = new System.Drawing.Point(22, 214);
             this.Orelabel.Name = "Orelabel";
             this.Orelabel.Size = new System.Drawing.Size(35, 13);
@@ -120,12 +125,13 @@ namespace Company
             // turaNoaptecheckBox
             // 
             this.turaNoaptecheckBox.AutoSize = true;
+            this.turaNoaptecheckBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.turaNoaptecheckBox.Location = new System.Drawing.Point(145, 215);
             this.turaNoaptecheckBox.Name = "turaNoaptecheckBox";
             this.turaNoaptecheckBox.Size = new System.Drawing.Size(75, 17);
             this.turaNoaptecheckBox.TabIndex = 7;
             this.turaNoaptecheckBox.Text = "Night Shift";
-            this.turaNoaptecheckBox.UseVisualStyleBackColor = true;
+            this.turaNoaptecheckBox.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -135,14 +141,15 @@ namespace Company
             this.dataGridView1.Location = new System.Drawing.Point(25, 247);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(739, 273);
+            this.dataGridView1.Size = new System.Drawing.Size(739, 249);
             this.dataGridView1.TabIndex = 8;
             // 
             // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 548);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(790, 522);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.turaNoaptecheckBox);
             this.Controls.Add(this.OrenumericUpDown);
@@ -152,6 +159,7 @@ namespace Company
             this.Controls.Add(this.dataMonthCalendar);
             this.Controls.Add(this.StergeButton);
             this.Controls.Add(this.AdaugaButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Booking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Booking";

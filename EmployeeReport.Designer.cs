@@ -29,6 +29,7 @@ namespace Company
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeReport));
             this.angajatComboBox = new System.Windows.Forms.ComboBox();
             this.angajatLabel = new System.Windows.Forms.Label();
             this.raportDataGridView = new System.Windows.Forms.DataGridView();
@@ -49,6 +50,7 @@ namespace Company
             // angajatLabel
             // 
             this.angajatLabel.AutoSize = true;
+            this.angajatLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.angajatLabel.Location = new System.Drawing.Point(23, 31);
             this.angajatLabel.Name = "angajatLabel";
             this.angajatLabel.Size = new System.Drawing.Size(53, 13);
@@ -57,6 +59,7 @@ namespace Company
             // 
             // raportDataGridView
             // 
+            this.raportDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.raportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.raportDataGridView.Location = new System.Drawing.Point(41, 141);
             this.raportDataGridView.Name = "raportDataGridView";
@@ -65,17 +68,19 @@ namespace Company
             // 
             // raportButton
             // 
+            this.raportButton.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.raportButton.Location = new System.Drawing.Point(690, 28);
             this.raportButton.Name = "raportButton";
             this.raportButton.Size = new System.Drawing.Size(75, 34);
             this.raportButton.TabIndex = 3;
             this.raportButton.Text = "Generate Report";
-            this.raportButton.UseVisualStyleBackColor = true;
+            this.raportButton.UseVisualStyleBackColor = false;
             this.raportButton.Click += new System.EventHandler(this.raportButton_Click);
             // 
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
+            this.totalLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.totalLabel.Location = new System.Drawing.Point(208, 36);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(62, 13);
@@ -94,6 +99,7 @@ namespace Company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(808, 450);
             this.Controls.Add(this.oreLabel);
             this.Controls.Add(this.totalLabel);
@@ -101,6 +107,7 @@ namespace Company
             this.Controls.Add(this.raportDataGridView);
             this.Controls.Add(this.angajatLabel);
             this.Controls.Add(this.angajatComboBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmployeeReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Report";

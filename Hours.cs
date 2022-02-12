@@ -15,11 +15,30 @@ namespace Company
         public bool Night { get; set; }
         public decimal DayBreak 
         {
-            get { return (int)(WorkedHours / 4) * 20 + (WorkedHours * 10); }
+            get {
+                if(!Night)
+                {
+                    return (int)(WorkedHours / 4) * 20 + (WorkedHours * 10);
+                }
+                else
+                {
+                    return 0;
+                }
+                 }
         }
         public decimal NightBreak 
         {
-            get { return (int)(WorkedHours / 4) * 30 + (WorkedHours * 15); } 
+            get 
+            {
+                if (Night)
+                {
+                    return (int)(WorkedHours / 4) * 30 + (WorkedHours * 15); 
+                }
+                else
+                {
+                    return 0;
+                }
+            } 
         }
 
         public Hours()

@@ -29,6 +29,7 @@ namespace Company
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Company));
             this.angajatiButton = new System.Windows.Forms.Button();
             this.pontajButton = new System.Windows.Forms.Button();
             this.raportButton = new System.Windows.Forms.Button();
@@ -44,32 +45,35 @@ namespace Company
             // 
             // angajatiButton
             // 
+            this.angajatiButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.angajatiButton.Location = new System.Drawing.Point(42, 168);
             this.angajatiButton.Name = "angajatiButton";
             this.angajatiButton.Size = new System.Drawing.Size(75, 35);
             this.angajatiButton.TabIndex = 0;
             this.angajatiButton.Text = "Employees";
-            this.angajatiButton.UseVisualStyleBackColor = true;
+            this.angajatiButton.UseVisualStyleBackColor = false;
             this.angajatiButton.Click += new System.EventHandler(this.angajatiButton_Click);
             // 
             // pontajButton
             // 
+            this.pontajButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pontajButton.Location = new System.Drawing.Point(250, 166);
             this.pontajButton.Name = "pontajButton";
             this.pontajButton.Size = new System.Drawing.Size(75, 37);
             this.pontajButton.TabIndex = 1;
             this.pontajButton.Text = "Booking";
-            this.pontajButton.UseVisualStyleBackColor = true;
+            this.pontajButton.UseVisualStyleBackColor = false;
             this.pontajButton.Click += new System.EventHandler(this.pontajButton_Click);
             // 
             // raportButton
             // 
+            this.raportButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.raportButton.Location = new System.Drawing.Point(457, 166);
             this.raportButton.Name = "raportButton";
             this.raportButton.Size = new System.Drawing.Size(75, 35);
             this.raportButton.TabIndex = 2;
             this.raportButton.Text = "Employee Report";
-            this.raportButton.UseVisualStyleBackColor = true;
+            this.raportButton.UseVisualStyleBackColor = false;
             this.raportButton.Click += new System.EventHandler(this.raportButton_Click);
             // 
             // resurseListView
@@ -121,24 +125,27 @@ namespace Company
             // 
             // settingsButton
             // 
+            this.settingsButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.settingsButton.Location = new System.Drawing.Point(393, 354);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(75, 21);
             this.settingsButton.TabIndex = 4;
             this.settingsButton.Text = "Config";
-            this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.UseVisualStyleBackColor = false;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // Company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(575, 387);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.resurseListView);
             this.Controls.Add(this.raportButton);
             this.Controls.Add(this.pontajButton);
             this.Controls.Add(this.angajatiButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Company";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Company";
