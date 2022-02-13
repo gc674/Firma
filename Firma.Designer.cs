@@ -1,7 +1,7 @@
 ﻿
-namespace Firma
+namespace Company
 {
-    partial class Firma
+    partial class Company
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Firma
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Company));
             this.angajatiButton = new System.Windows.Forms.Button();
             this.pontajButton = new System.Windows.Forms.Button();
             this.raportButton = new System.Windows.Forms.Button();
@@ -44,32 +45,35 @@ namespace Firma
             // 
             // angajatiButton
             // 
+            this.angajatiButton.BackColor = System.Drawing.Color.Khaki;
             this.angajatiButton.Location = new System.Drawing.Point(42, 168);
             this.angajatiButton.Name = "angajatiButton";
             this.angajatiButton.Size = new System.Drawing.Size(75, 35);
             this.angajatiButton.TabIndex = 0;
-            this.angajatiButton.Text = "Angajati";
-            this.angajatiButton.UseVisualStyleBackColor = true;
+            this.angajatiButton.Text = "Employees";
+            this.angajatiButton.UseVisualStyleBackColor = false;
             this.angajatiButton.Click += new System.EventHandler(this.angajatiButton_Click);
             // 
             // pontajButton
             // 
-            this.pontajButton.Location = new System.Drawing.Point(220, 166);
+            this.pontajButton.BackColor = System.Drawing.Color.Khaki;
+            this.pontajButton.Location = new System.Drawing.Point(250, 166);
             this.pontajButton.Name = "pontajButton";
             this.pontajButton.Size = new System.Drawing.Size(75, 37);
             this.pontajButton.TabIndex = 1;
-            this.pontajButton.Text = "Pontaj";
-            this.pontajButton.UseVisualStyleBackColor = true;
+            this.pontajButton.Text = "Booking";
+            this.pontajButton.UseVisualStyleBackColor = false;
             this.pontajButton.Click += new System.EventHandler(this.pontajButton_Click);
             // 
             // raportButton
             // 
-            this.raportButton.Location = new System.Drawing.Point(393, 168);
+            this.raportButton.BackColor = System.Drawing.Color.Khaki;
+            this.raportButton.Location = new System.Drawing.Point(457, 166);
             this.raportButton.Name = "raportButton";
             this.raportButton.Size = new System.Drawing.Size(75, 35);
             this.raportButton.TabIndex = 2;
-            this.raportButton.Text = "Raport Angajat";
-            this.raportButton.UseVisualStyleBackColor = true;
+            this.raportButton.Text = "Employee Report";
+            this.raportButton.UseVisualStyleBackColor = false;
             this.raportButton.Click += new System.EventHandler(this.raportButton_Click);
             // 
             // resurseListView
@@ -84,63 +88,67 @@ namespace Firma
             this.resurseListView.HideSelection = false;
             this.resurseListView.Location = new System.Drawing.Point(42, 38);
             this.resurseListView.Name = "resurseListView";
-            this.resurseListView.Size = new System.Drawing.Size(497, 103);
+            this.resurseListView.Size = new System.Drawing.Size(490, 103);
             this.resurseListView.TabIndex = 3;
             this.resurseListView.UseCompatibleStateImageBehavior = false;
             this.resurseListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Numar angajati";
-            this.columnHeader1.Width = 90;
+            this.columnHeader1.Text = "Employees";
+            this.columnHeader1.Width = 75;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Ore Noapte";
+            this.columnHeader2.Text = "Night Hours";
             this.columnHeader2.Width = 80;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Cost Ore Noapte";
-            this.columnHeader3.Width = 100;
+            this.columnHeader3.Text = "Night Hours Cost";
+            this.columnHeader3.Width = 93;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Ore Zi";
+            this.columnHeader4.Text = "Day Hours";
+            this.columnHeader4.Width = 65;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Cost Ore Zi";
-            this.columnHeader5.Width = 80;
+            this.columnHeader5.Text = "Day Hours Cost";
+            this.columnHeader5.Width = 93;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Cost Total";
+            this.columnHeader6.Text = "Total Cost";
             this.columnHeader6.Width = 80;
             // 
             // settingsButton
             // 
+            this.settingsButton.BackColor = System.Drawing.Color.Khaki;
             this.settingsButton.Location = new System.Drawing.Point(393, 354);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(75, 21);
             this.settingsButton.TabIndex = 4;
-            this.settingsButton.Text = "Configuratie";
-            this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.Text = "Config";
+            this.settingsButton.UseVisualStyleBackColor = false;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
-            // Firma
+            // Company
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 387);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(575, 387);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.resurseListView);
             this.Controls.Add(this.raportButton);
             this.Controls.Add(this.pontajButton);
             this.Controls.Add(this.angajatiButton);
-            this.Name = "Firma";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Company";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Firma";
+            this.Text = "Company";
             this.Load += new System.EventHandler(this.Firma_Load);
             this.ResumeLayout(false);
 

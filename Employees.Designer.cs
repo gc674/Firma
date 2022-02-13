@@ -1,7 +1,7 @@
 ﻿
-namespace Firma
+namespace Company
 {
-    partial class Angajati
+    partial class Employees
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Firma
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             this.numeLabel = new System.Windows.Forms.Label();
             this.numeBox = new System.Windows.Forms.TextBox();
             this.prenumeBox = new System.Windows.Forms.TextBox();
@@ -53,11 +54,13 @@ namespace Firma
             // numeLabel
             // 
             this.numeLabel.AutoSize = true;
-            this.numeLabel.Location = new System.Drawing.Point(58, 32);
+            this.numeLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.numeLabel.Location = new System.Drawing.Point(31, 29);
             this.numeLabel.Name = "numeLabel";
-            this.numeLabel.Size = new System.Drawing.Size(35, 13);
+            this.numeLabel.Size = new System.Drawing.Size(57, 13);
             this.numeLabel.TabIndex = 0;
-            this.numeLabel.Text = "Nume";
+            this.numeLabel.Text = "First Name";
+            this.numeLabel.Click += new System.EventHandler(this.numeLabel_Click);
             // 
             // numeBox
             // 
@@ -76,20 +79,22 @@ namespace Firma
             // prenumeLabel
             // 
             this.prenumeLabel.AutoSize = true;
-            this.prenumeLabel.Location = new System.Drawing.Point(44, 58);
+            this.prenumeLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.prenumeLabel.Location = new System.Drawing.Point(27, 55);
             this.prenumeLabel.Name = "prenumeLabel";
-            this.prenumeLabel.Size = new System.Drawing.Size(49, 13);
+            this.prenumeLabel.Size = new System.Drawing.Size(58, 13);
             this.prenumeLabel.TabIndex = 2;
-            this.prenumeLabel.Text = "Prenume";
+            this.prenumeLabel.Text = "Last Name";
             // 
             // dataNasteriiLabel
             // 
             this.dataNasteriiLabel.AutoSize = true;
-            this.dataNasteriiLabel.Location = new System.Drawing.Point(27, 87);
+            this.dataNasteriiLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataNasteriiLabel.Location = new System.Drawing.Point(31, 81);
             this.dataNasteriiLabel.Name = "dataNasteriiLabel";
-            this.dataNasteriiLabel.Size = new System.Drawing.Size(66, 13);
+            this.dataNasteriiLabel.Size = new System.Drawing.Size(54, 13);
             this.dataNasteriiLabel.TabIndex = 4;
-            this.dataNasteriiLabel.Text = "Data nasterii";
+            this.dataNasteriiLabel.Text = "Birth Date";
             // 
             // dateTimePicker1
             // 
@@ -101,11 +106,12 @@ namespace Firma
             // telefonLabel
             // 
             this.telefonLabel.AutoSize = true;
-            this.telefonLabel.Location = new System.Drawing.Point(51, 112);
+            this.telefonLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.telefonLabel.Location = new System.Drawing.Point(48, 107);
             this.telefonLabel.Name = "telefonLabel";
-            this.telefonLabel.Size = new System.Drawing.Size(42, 17);
+            this.telefonLabel.Size = new System.Drawing.Size(37, 17);
             this.telefonLabel.TabIndex = 6;
-            this.telefonLabel.Text = "Telefon";
+            this.telefonLabel.Text = "Phone";
             this.telefonLabel.UseCompatibleTextRendering = true;
             // 
             // telefonBox
@@ -117,12 +123,13 @@ namespace Firma
             // 
             // adaugaButton
             // 
+            this.adaugaButton.BackColor = System.Drawing.Color.Khaki;
             this.adaugaButton.Location = new System.Drawing.Point(557, 29);
             this.adaugaButton.Name = "adaugaButton";
             this.adaugaButton.Size = new System.Drawing.Size(80, 37);
             this.adaugaButton.TabIndex = 8;
-            this.adaugaButton.Text = "Adauga";
-            this.adaugaButton.UseVisualStyleBackColor = true;
+            this.adaugaButton.Text = "Add";
+            this.adaugaButton.UseVisualStyleBackColor = false;
             this.adaugaButton.Click += new System.EventHandler(this.adaugaButton_Click);
             // 
             // angajatiListView
@@ -136,9 +143,9 @@ namespace Firma
             this.angajatiListView.FullRowSelect = true;
             this.angajatiListView.GridLines = true;
             this.angajatiListView.HideSelection = false;
-            this.angajatiListView.Location = new System.Drawing.Point(30, 178);
+            this.angajatiListView.Location = new System.Drawing.Point(34, 178);
             this.angajatiListView.Name = "angajatiListView";
-            this.angajatiListView.Size = new System.Drawing.Size(649, 239);
+            this.angajatiListView.Size = new System.Drawing.Size(619, 239);
             this.angajatiListView.TabIndex = 9;
             this.angajatiListView.UseCompatibleStateImageBehavior = false;
             this.angajatiListView.View = System.Windows.Forms.View.Details;
@@ -149,32 +156,33 @@ namespace Firma
             // 
             // NumeHeader
             // 
-            this.NumeHeader.Text = "Nume";
-            this.NumeHeader.Width = 170;
+            this.NumeHeader.Text = "First Name";
+            this.NumeHeader.Width = 150;
             // 
             // PrenumeHeader
             // 
-            this.PrenumeHeader.Text = "Prenume";
-            this.PrenumeHeader.Width = 170;
+            this.PrenumeHeader.Text = "Last Name";
+            this.PrenumeHeader.Width = 150;
             // 
             // DataHeader
             // 
-            this.DataHeader.Text = "DataNasterii";
-            this.DataHeader.Width = 170;
+            this.DataHeader.Text = "Birth Date";
+            this.DataHeader.Width = 100;
             // 
             // TelefonHeader
             // 
-            this.TelefonHeader.Text = "Telefon";
-            this.TelefonHeader.Width = 170;
+            this.TelefonHeader.Text = "Phone";
+            this.TelefonHeader.Width = 150;
             // 
             // StergeButton
             // 
+            this.StergeButton.BackColor = System.Drawing.Color.Khaki;
             this.StergeButton.Location = new System.Drawing.Point(557, 92);
             this.StergeButton.Name = "StergeButton";
             this.StergeButton.Size = new System.Drawing.Size(80, 37);
             this.StergeButton.TabIndex = 10;
-            this.StergeButton.Text = "Sterge";
-            this.StergeButton.UseVisualStyleBackColor = true;
+            this.StergeButton.Text = "Delete";
+            this.StergeButton.UseVisualStyleBackColor = false;
             this.StergeButton.Click += new System.EventHandler(this.StergeButton_Click);
             // 
             // idNumericUpDown
@@ -193,11 +201,12 @@ namespace Firma
             this.idLabel.TabIndex = 12;
             this.idLabel.Text = "Id";
             // 
-            // Angajati
+            // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(687, 450);
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.idNumericUpDown);
             this.Controls.Add(this.StergeButton);
@@ -211,9 +220,10 @@ namespace Firma
             this.Controls.Add(this.prenumeLabel);
             this.Controls.Add(this.numeBox);
             this.Controls.Add(this.numeLabel);
-            this.Name = "Angajati";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Employees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Angajati";
+            this.Text = "Employees";
             this.Load += new System.EventHandler(this.Angajati_Load);
             ((System.ComponentModel.ISupportInitialize)(this.idNumericUpDown)).EndInit();
             this.ResumeLayout(false);

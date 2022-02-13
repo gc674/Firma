@@ -22,6 +22,9 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ## Todo
 - in progress
+- update with break hours
+- add reports printing posibility
+
 
 ## License
 [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/)
@@ -29,7 +32,7 @@ For major changes, please open an issue first to discuss what you would like to 
 ## Language
 ```
 Romanian
-Sorry, translation to be added
+- new branch created for english
 ```
 
 ## Readme template
