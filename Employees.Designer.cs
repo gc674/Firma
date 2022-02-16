@@ -60,7 +60,6 @@ namespace Company
             this.numeLabel.Size = new System.Drawing.Size(57, 13);
             this.numeLabel.TabIndex = 0;
             this.numeLabel.Text = "First Name";
-            this.numeLabel.Click += new System.EventHandler(this.numeLabel_Click);
             // 
             // numeBox
             // 

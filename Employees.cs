@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Company
@@ -44,7 +46,8 @@ namespace Company
                 telefonBox.Clear();
                 numeBox.Focus();
                 //update NumericBox with employee id
-                idNumericUpDown.Value = _company.Employees.Count;
+                //idNumericUpDown.Value = _company.Employees.Count;
+                idNumericUpDown.Value = GenerateId();
                 idNumericUpDown.Refresh();
                 //save employees list
                 _company.Save();
@@ -73,6 +76,16 @@ namespace Company
             }
         }
 
+        private int GenerateId()
+        {
+            //_company.Load();
+            //block for checking the existing ids
+            List<int> ids = _company.Employees.Select(o => o.Id).ToList();
+            ids.Sort();
+            int newId = ids.LastOrDefault() + 1;
+            return newId;
+
+        }
         private void Angajati_Load(object sender, EventArgs e)
         {
             _company.Load();
@@ -88,14 +101,11 @@ namespace Company
                 angajatiListView.Items.Add(item);
             }
             idNumericUpDown.Enabled = false;
-            idNumericUpDown.Value = _company.Employees.Count;
+            //idNumericUpDown.Value = _company.Employees.Count;
+            idNumericUpDown.Value = GenerateId();
             idNumericUpDown.Refresh();
 
         }
 
-        private void numeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

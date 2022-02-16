@@ -12,8 +12,9 @@ namespace Company
     {
         //creare lista de angajati
         public List<Employee> Employees;
+        private static string fileName = "company.xml";
 
-        private string companyFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "company.xml");
+        private string companyFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
         public Compay()
         {
             //constructor for employees list

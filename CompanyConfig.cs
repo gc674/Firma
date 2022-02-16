@@ -8,13 +8,14 @@ namespace Company
     {
         public decimal HourCost { get; set; }
         public string CompanyName { get; set; }
-        //private string fileName = "settings.xml";
-        //private string settingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "setari.xml");
-        private string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "settings.xml");
+
+        private static string fileName = "settings.xml";
+
+        private string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
 
         public CompanyConfig()
         {
-            //CompanyConfig = new CompanyConfig(); //-- buffer overflow :)
+
         }
 
         public CompanyConfig(string companyname, decimal hourcost)

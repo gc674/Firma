@@ -10,7 +10,10 @@ namespace Company
         //creating hour list per employee
         public BindingList<Hours> Hours;
         public decimal TotalOre { get; set; }
-        private string workedHoursFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "workedhours.xml");
+
+
+        private static string fileName = "workedhours.xml";
+        private string workedHoursFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
 
         public WorkedHours()
         {
