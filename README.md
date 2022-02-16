@@ -22,7 +22,7 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ## Todo
 - in progress
-- update with break hours
+~~- update with break hours~~
 - add reports printing posibility
 
 
@@ -31,7 +31,7 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ## Language
 ```
-Romanian
+Romanian, English
 - new branch created for english
 ```
 
